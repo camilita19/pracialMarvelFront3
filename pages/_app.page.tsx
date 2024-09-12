@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import type { AppProps } from 'next/app'
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import LayoutGeneral from "dh-marvel/components/layouts/layout-general";
