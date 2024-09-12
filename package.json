@@ -12,8 +12,8 @@
     "test": "jest --env=jsdom",
     "test:watch": "jest --env=jsdom --watch",
     "test:ci": "jest --ci --runInBand --detectOpenHandles --forceExit ",
-    "coverage": "jest --env=jsdom --coverage --runInBand --detectOpenHandles --forceExit ",
-    "prepare": "husky"
+    "coverage": "jest --env=jsdom --coverage --runInBand --detectOpenHandles --forceExit "
+   
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
