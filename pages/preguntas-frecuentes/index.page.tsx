@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import { getFaqs } from '../../../services/faqs/getFaqs'
+import { getFaqs } from '../../services/faqs/getFaqs'
 import { type GetStaticProps, type NextPage } from 'next'
-import { type FaqsType } from '../../../components/faqs/faqsData'
-import LayoutGeneral from '../../../components/layouts/layout-general'
+import { type FaqsType } from '../../components/faqs/faqsData'
+import LayoutGeneral from '../../components/layouts/layout-general'
 import { Accordion, AccordionDetails, AccordionSummary } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import BodySingle from '../../../components/layouts/body/single/body-single'
+import BodySingle from '../../components/layouts/body/single/body-single'
 
 interface FaqPageProps {
   faqs: FaqsType[];
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async () => {
       props: {
         faqs,
       },
-      // revalidate: 60,
+     
     }
   } catch (error) {
     console.error('Error fetching FAQs:', error)
