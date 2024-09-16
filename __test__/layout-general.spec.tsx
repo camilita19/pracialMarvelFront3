@@ -1,5 +1,8 @@
 import {render, screen} from '@testing-library/react'
-import LayoutGeneral from "dh-marvel/components/layouts/layout-general";
+import LayoutGeneral from "../components/layouts/layout-general";
+import { describe, it, expect } from '@jest/globals';
+import React from 'react';
+
 
 jest.mock('dh-marvel/components/layouts/header/general-header.component', () => () => {
     return <div>Header</div>;

@@ -9,12 +9,12 @@ import GeneralFooter from "dh-marvel/components/layouts/footer/general-footer.co
 const LayoutCheckout: FC<PropsWithChildren> = ({children}: PropsWithChildren) => {
 
     return (<>
-            <Stack direction={"column"} height={'100%'}>
-                <GeneralHeader variant={'simple'}/>
-                <Box display={'flex'} flexGrow={1}>
+            <Stack direction={"column"} height={'100%'} >
+                {/* <GeneralHeader variant={'simple'}/> */}
+                <Box display={'flex'} flexGrow={1} >
                     {children}
                 </Box>
-                <GeneralFooter />
+                {/* <GeneralFooter /> */}
             </Stack>
         </>
     );
