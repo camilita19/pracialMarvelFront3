@@ -52,7 +52,7 @@ const Index: NextPage<ComicsPageProps> = ({ initialComics }) => {
             <>
               <ComicsCard comics={comics} />
               <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '10px' }}>
-                <Pagination count={10} page={currentPage} onChange={handlePageChange} color="primary" />
+                <Pagination count={10} page={currentPage} onChange={handlePageChange} sx={{'& .Mui-selected': { backgroundColor: 'black !important', color: 'white' }}}/>
               </Box>
             </>
           )}

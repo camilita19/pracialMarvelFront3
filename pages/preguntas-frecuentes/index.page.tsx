@@ -13,8 +13,8 @@ interface FaqPageProps {
 
 const FaqsPage: NextPage<FaqPageProps> = ({ faqs }) => {
   return (
-    <LayoutGeneral>
-      <BodySingle title="Preguntas Frecuentes (FAQ)">
+    // <LayoutGeneral>
+      <BodySingle title="Preguntas Frecuentes ">
         {faqs.map((faq) => (
           <Accordion key={faq.id}>
             <AccordionSummary id="panel-header" aria-controls="panel-content" expandIcon={<ExpandMoreIcon />}>
@@ -24,7 +24,7 @@ const FaqsPage: NextPage<FaqPageProps> = ({ faqs }) => {
           </Accordion>
         ))}
       </BodySingle>
-    </LayoutGeneral>
+    // </LayoutGeneral>
   )
 }
 
