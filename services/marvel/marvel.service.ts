@@ -31,7 +31,7 @@ export const getComic = async (comicId: string): Promise<any> => {
   
     const data = await fetchApi(`comics/${comicId}`);
   
-    // Mostrar el contenido completo de la respuesta
+   
     console.log("API Response:", data);
   
     if (!data?.data?.results) {
@@ -44,7 +44,7 @@ export const getComic = async (comicId: string): Promise<any> => {
       return null;
     }
   
-    // Lógica de modificación de precio y stock
+    
     if (`${comic.id}`.endsWith('0')) {
       comic.price = 48;
       comic.oldPrice = 48;
