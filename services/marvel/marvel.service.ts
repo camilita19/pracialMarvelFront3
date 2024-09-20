@@ -58,20 +58,26 @@ export const getComic = async (comicId: string): Promise<any> => {
     return comic;
   };
   
-  
+  export const getCharacter = async (characterId: string) => {
+    const idAsNumber = Number(characterId); 
+    const data = await fetchApi(`characters/${characterId}`);
+    const results = data.data.results;
+    if (results.length > 0) return results[0];
+    else return null;
+}
   
 
 
-export const getCharacter = async (characterId: string): Promise<any> => {
-    const parsedId = Number(characterId);
+// export const getCharacter = async (characterId: string): Promise<any> => {
+//     const parsedId = Number(characterId);
     
-    if (isNaN(parsedId)) {
-      throw new Error('Invalid characterId');
-    }
+//     if (isNaN(parsedId)) {
+//       throw new Error('Invalid characterId');
+//     }
   
-    const data = await fetchApi(`characters/${parsedId}`);
-    return data?.data?.results?.[0] || null;
-  };
+//     const data = await fetchApi(`characters/${parsedId}`);
+//     return data?.data?.results?.[0] || null;
+//   };
   
 
 //   export const getComic = async (comicId: number) => {
@@ -94,10 +100,3 @@ export const getCharacter = async (characterId: string): Promise<any> => {
 // }
 
 
-// export const getCharacter = async (characterId: string) => {
-//     const idAsNumber = Number(characterId); 
-//     const data = await fetchApi(`characters/${characterId}`);
-//     const results = data.data.results;
-//     if (results.length > 0) return results[0];
-//     else return null;
-// }
